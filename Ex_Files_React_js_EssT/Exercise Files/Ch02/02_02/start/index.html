@@ -10,8 +10,20 @@
       <div id="root"></div>
       
       <script type="text/javascript">
+        let ul = React.createElement(
+          "ul",
+          { style: {color: "blue" } },
+          React.createElement("li", null, "A"),
+          React.createElement("li", null, "B"),
+          React.createElement("li", null, "C")
+        );
+
           ReactDOM.render(
-              React.createElement("h1", null, "Getting Started!"),
+              <ul>
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+              </ul>,
               document.getElementById("root")
           );
       </script>
