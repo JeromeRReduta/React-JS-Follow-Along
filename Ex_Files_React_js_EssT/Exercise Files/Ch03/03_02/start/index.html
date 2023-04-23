@@ -17,19 +17,26 @@
     <div id="root"></div>
 
     <script type="text/babel">
+
+      const dishes = [
+        "Raw metal ore",
+        "A foot",
+        "Wait this isn't food..."
+      ];
+
       function Header(props) {
         return (
           <header>
-            <h1>{props.name}'s' Kitchen</h1>
+            <h1>{props.name}'s Kitchen</h1>
           </header>
         );
       }
       function Main(props) {
         return (
           <section>
-            <p>
-              This stuff is {props.adjective} as heck
-            </p>
+            <ul>
+              {dishes.map( (dish) => <li>{dish}</li> )}
+            </ul>
           </section>
         );
       }
@@ -45,7 +52,7 @@
         return (
           <div>
             <Header name = "Bubba" />
-            <Main adjective = "delicious" />
+            <Main dishes = {dishes} />
             <Footer year = {2022} />
           </div>
         );
