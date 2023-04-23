@@ -17,11 +17,15 @@
     <div id="root"></div>
 
     <script type="text/babel">
+      let first_text = "A";
+      let second_text = "B";
+      let third_text = "Was that what you were expecting?";
+
       ReactDOM.render(
         <ul>
-          <li>🤖</li>
-          <li>🤠</li>
-          <li>🌝</li>
+          <li>{first_text}</li>
+          <li>{second_text}</li>
+          <li>{third_text.toUpperCase()}</li>
         </ul>,
         document.getElementById("root")
       );
